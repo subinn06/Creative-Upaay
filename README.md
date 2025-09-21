@@ -1,10 +1,11 @@
-#Project Overview
+🚀Project Overview
 
 This project is a Task Management Dashboard built with React.js.
 It replicates a Figma design and implements key features for managing tasks in a Kanban-style board.
+Live Link: https://creative-upaay-seven.vercel.app
 
 
-#Features
+✨Features
 
 Pixel-perfect UI based on the provided Figma design.
 
@@ -26,7 +27,7 @@ Persistence with Local Storage: tasks are saved and reloaded on refresh.
 Bonus: Drag-and-drop task reordering (powered by react-beautiful-dnd).
 
 
-#Steps to Run Locally
+🛠️Steps to Run Locally
 
 1. Clone the repository
 git clone <your-repo-url>
@@ -41,7 +42,7 @@ npm start
 The app will be available at http://localhost:3000
 
 
-#Technologies Used
+⚙️Technologies Used
 
 Frontend Framework: React.js
 
@@ -56,7 +57,7 @@ Drag & Drop: react-beautiful-dnd
 Styling: MUI components + custom styles
 
 
-#Known Limitations
+⚡Known Limitations
 
 Members Feature: Task cards show members count, but assigning members is not yet implemented.
 
@@ -69,19 +70,7 @@ Topbar Search: A global search bar exists, but it is not yet wired to the Redux 
 StrictMode Compatibility: react-beautiful-dnd may throw warnings/errors under React 18 StrictMode. Disabling StrictMode in index.js or using prefixed droppableIds solves this.
 
 
-#Folder Structure
-
-src/
-├── assets/          # Images and icons
-├── components/      # Reusable UI components (Sidebar, Topbar, Board, TaskCard, etc.)
-│   └── Board/       # Kanban board components
-├── redux/           # Redux store, reducers, actions
-├── utils/           # LocalStorage helper
-├── App.js           # Main App layout
-└── index.js         # Entry point
-
-
-#Future Improvements
+📝Future Improvements
 
 Add member assignment to tasks.
 
