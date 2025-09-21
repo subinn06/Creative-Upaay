@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+#Project Overview
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a Task Management Dashboard built with React.js.
+It replicates a Figma design and implements key features for managing tasks in a Kanban-style board.
 
-## Available Scripts
 
-In the project directory, you can run:
+#Features
 
-### `npm start`
+Pixel-perfect UI based on the provided Figma design.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Kanban Board Layout with three sections:
+To Do
+On Progress
+Done
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Task Management:
+Add, edit, delete tasks
+Move tasks between columns (via dropdown or drag-and-drop)
+Filter tasks by category, priority, and due date
+Search by title/description
 
-### `npm test`
+Redux for State Management: centralized state handling.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Persistence with Local Storage: tasks are saved and reloaded on refresh.
 
-### `npm run build`
+Bonus: Drag-and-drop task reordering (powered by react-beautiful-dnd).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#Steps to Run Locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository
+git clone <your-repo-url>
+cd creative-upaay-dashboard
 
-### `npm run eject`
+2. Install dependencies
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Start the development server
+npm start
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The app will be available at http://localhost:3000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#Technologies Used
 
-## Learn More
+Frontend Framework: React.js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+UI Library: Material-UI (MUI)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+State Management: Redux
 
-### Code Splitting
+Persistence: Local Storage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Drag & Drop: react-beautiful-dnd
 
-### Analyzing the Bundle Size
+Styling: MUI components + custom styles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+#Known Limitations
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Members Feature: Task cards show members count, but assigning members is not yet implemented.
 
-### Advanced Configuration
+Sidebar Navigation: The navigation items (Home, Messages, etc.) are static and non-functional.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Project Switching: Sidebar lists projects visually, but only the Mobile App project is active.
 
-### Deployment
+Topbar Search: A global search bar exists, but it is not yet wired to the Redux filters (use the FilterBar / ProjectHeader filters instead).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+StrictMode Compatibility: react-beautiful-dnd may throw warnings/errors under React 18 StrictMode. Disabling StrictMode in index.js or using prefixed droppableIds solves this.
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#Folder Structure
+
+src/
+├── assets/          # Images and icons
+├── components/      # Reusable UI components (Sidebar, Topbar, Board, TaskCard, etc.)
+│   └── Board/       # Kanban board components
+├── redux/           # Redux store, reducers, actions
+├── utils/           # LocalStorage helper
+├── App.js           # Main App layout
+└── index.js         # Entry point
+
+
+#Future Improvements
+
+Add member assignment to tasks.
+
+Connect sidebar navigation to routes.
+
+Wire up Topbar global search.
+
+Dark/light mode toggle.
+
+Improve mobile responsiveness further.

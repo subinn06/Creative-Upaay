@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Provider } from "react-redux";
+import store from "./redux/store";
+import Sidebar from "./components/Sidebar";
+import Topbar from "./components/Topbar";
+import ProjectHeader from "./components/ProjectHeader";
+import Board from "./components/Board/Board";
+import { CssBaseline, Box } from "@mui/material";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <CssBaseline />
+      <Box sx={{ display: "flex", minHeight: "100vh" }}>
+        <Sidebar />
+        <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
+          <Topbar />
+          <Box
+            component="main"
+            sx={{
+              width: "100%",
+              px: { xs: 3, md: 6 },
+              py: 4,
+            }}
+          >
+            <ProjectHeader />
+            <Board />
+          </Box>
+        </Box>
+      </Box>
+    </Provider>
   );
 }
 
