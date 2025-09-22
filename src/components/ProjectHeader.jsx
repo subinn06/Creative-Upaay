@@ -54,7 +54,7 @@ const ProjectHeader = () => {
           <Box display="flex" gap={0.5} ml={1}>
             <Box sx={{ bgcolor: "primary.lighter", borderRadius: 1, px: 0.5, py: 0.25 }}>
               <Typography variant="caption" sx={{ color: "primary.main" }}>
-                 ↀ
+            
               </Typography>
             </Box>
             <Box sx={{ bgcolor: "primary.lighter", borderRadius: 1, px: 0.5, py: 0.25 }}>
