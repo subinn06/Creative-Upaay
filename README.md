@@ -30,7 +30,7 @@ Bonus: Drag-and-drop task reordering (powered by react-beautiful-dnd).
 🛠️Steps to Run Locally
 
 1. Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/subinn06/Creative-Upaay.git
 cd creative-upaay-dashboard
 
 2. Install dependencies
